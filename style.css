@@ -1,0 +1,76 @@
+body {
+  background: url(./assets/background.avif) no-repeat center;
+  background-size: cover;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.phone-container {
+  background: url(./assets/phone-bg.jpg) no-repeat center;
+  background-size: cover;
+
+  width: 300px;
+  height: 600px;
+}
+
+.phone-container::-webkit-scrollbar {
+  display: none;
+}
+
+.header-left {
+  min-width: 25%;
+}
+
+.header-middle {
+  min-width: 30%;
+  height: 20px;
+}
+
+.header-right {
+  max-width: 25%;
+  display: flex;
+  gap: 5px;
+  font-size: larger;
+}
+
+.slider {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: radial-gradient(white, brown);
+}
+
+#label {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  animation: slide-animation 3s ease-in-out infinite;
+}
+
+@keyframes slide-animation {
+  0%,
+  100% {
+    color: black;
+    filter: drop-shadow(0 0 10px brown);
+  }
+  50% {
+    color: brown;
+    filter: drop-shadow(0 0 10px black);
+  }
+}
